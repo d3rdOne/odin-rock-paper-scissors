@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+
+        .choice-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+        .result-container {
+            gap: 20px;
+        }
+
+        .result-container span {
+            text-transform: uppercase;
+        }
+        .end-game * {
+            pointer-events: none;
+        }
+        #reset {
+            display: none;
+        }
+
+        #reset.show {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="choice-container">
+        <button id="rock" onclick="playRound(event)">Rock</button>
+        <button id="paper" onclick="playRound(event)">Paper</button>
+        <button id="scisor" onclick="playRound(event)">Scisor</button>
+    </div>
+    <div class="result-container">
+        <div >Computer Chose: <span id="cpuChoice"></span></div>
+        <div >You Chose: <span id="humanChoice"></span></div>
+        <br>
+        <div >Round <span id="round"></span></div>
+        <div> Player Score: <span id="playerScore"></span></div>
+        <div> Cpu Score <span id="cpuScore"></span></div>
+        <div class="Result" id="result"></div>
+        <button id="reset" onclick="resetGame()">Reset</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
